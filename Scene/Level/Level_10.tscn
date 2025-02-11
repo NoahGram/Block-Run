@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://lqqe3iijuswo"]
+
+[ext_resource type="PackedScene" uid="uid://d36g340n7y6hn" path="res://Scene/player.tscn" id="1_s5m5g"]
+[ext_resource type="Texture2D" uid="uid://ce4ixac1ws33o" path="res://Assets/Epic_GloriousPink_EquiRect.png" id="2_ej330"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2d7ei"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3l6kv"]
+albedo_color = Color(0.752104, 0.91718, 0.947864, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_78piy"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_5ow5s"]
+panorama = ExtResource("2_ej330")
+
+[sub_resource type="Sky" id="Sky_wvrvi"]
+sky_material = SubResource("PanoramaSkyMaterial_5ow5s")
+
+[sub_resource type="Environment" id="Environment_j7641"]
+background_mode = 2
+sky = SubResource("Sky_wvrvi")
+tonemap_mode = 2
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(50, 0, 0, 0, 1, 0, 0, 0, 4.5, 49, 0, 0)
+mesh = SubResource("PlaneMesh_2d7ei")
+surface_material_override/0 = SubResource("StandardMaterial3D_3l6kv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -1, 0)
+shape = SubResource("BoxShape3D_78piy")
+
+[node name="Player" parent="." instance=ExtResource("1_s5m5g")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.289856, 1.29393, -0.0297767)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.906308, 0.416198, -0.0733869, 0, 0.173648, 0.984808, 0.422618, 0.892539, -0.157379, 22, 24, 2)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_j7641")

@@ -1,0 +1,207 @@
+[gd_scene load_steps=13 format=3 uid="uid://cwylu7ilkuhpb"]
+
+[ext_resource type="PackedScene" uid="uid://d36g340n7y6hn" path="res://Scene/player.tscn" id="1_cold3"]
+[ext_resource type="PackedScene" uid="uid://cfab1io6l4g7l" path="res://Scene/Block/block_m.tscn" id="2_moafn"]
+[ext_resource type="PackedScene" uid="uid://ce2v312v4jhyj" path="res://Scene/Block/block.tscn" id="3_0rvp3"]
+[ext_resource type="PackedScene" uid="uid://csxjayjok40qa" path="res://Scene/Block/pillar.tscn" id="4_661o7"]
+[ext_resource type="PackedScene" uid="uid://liipnwj7ofj7" path="res://Scene/EndPoint.tscn" id="5_10sek"]
+[ext_resource type="Texture2D" uid="uid://dww0wrsgtuttk" path="res://Assets/Epic_BlueSunset_EquiRect_flat.png" id="6_4w6tw"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ejxr7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wksr3"]
+albedo_color = Color(0.886369, 0.794682, 0.985167, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1k2ym"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_g0jhc"]
+panorama = ExtResource("6_4w6tw")
+
+[sub_resource type="Sky" id="Sky_44r66"]
+sky_material = SubResource("PanoramaSkyMaterial_g0jhc")
+
+[sub_resource type="Environment" id="Environment_6ecno"]
+background_mode = 2
+sky = SubResource("Sky_44r66")
+tonemap_mode = 2
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(45, 0, 0, 0, 1, 0, 0, 0, 4.5, 44, 0, 0)
+mesh = SubResource("PlaneMesh_ejxr7")
+surface_material_override/0 = SubResource("StandardMaterial3D_wksr3")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -1, 0)
+shape = SubResource("BoxShape3D_1k2ym")
+
+[node name="Player" parent="." instance=ExtResource("1_cold3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.272942, 0.939052, 0.111383)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.906308, 0.416198, -0.0733869, 0, 0.173648, 0.984808, 0.422618, 0.892539, -0.157379, 22, 24, 2)
+
+[node name="RigidBody3D" parent="." instance=ExtResource("2_moafn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7413, 0.70186, -2.4546)
+
+[node name="RigidBody3D2" parent="." instance=ExtResource("2_moafn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7413, 0.70186, 0.545402)
+
+[node name="RigidBody3D3" parent="." instance=ExtResource("2_moafn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0.543206, -2.48478)
+
+[node name="RigidBody3D4" parent="." instance=ExtResource("2_moafn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0.543206, 2.50602)
+
+[node name="RigidBody3D5" parent="." instance=ExtResource("2_moafn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23.6921, 0.859034, 0.048756)
+
+[node name="RigidBody3D6" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0.5, -4)
+
+[node name="RigidBody3D7" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0.5, -3)
+
+[node name="RigidBody3D8" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0.5, -2)
+
+[node name="RigidBody3D9" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0.5, 4)
+
+[node name="RigidBody3D10" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0.5, 3)
+
+[node name="RigidBody3D11" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29, 0.5, 2)
+
+[node name="RigidBody3D12" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0.5, -4)
+
+[node name="RigidBody3D13" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0.5, -3)
+
+[node name="RigidBody3D14" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38, 0.5, -2)
+
+[node name="RigidBody3D15" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0.5, -2)
+
+[node name="RigidBody3D16" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37, 0.5, -1)
+
+[node name="RigidBody3D17" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0.5, 4)
+
+[node name="RigidBody3D18" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 34, 0.5, 3)
+
+[node name="RigidBody3D19" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 35, 0.5, 2)
+
+[node name="RigidBody3D20" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0.5, 4)
+
+[node name="RigidBody3D21" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0.5, 3)
+
+[node name="RigidBody3D22" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0.5, 2)
+
+[node name="RigidBody3D23" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0.5, 1)
+
+[node name="RigidBody3D24" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0.5, 0)
+
+[node name="RigidBody3D25" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, 0.5, -4)
+
+[node name="RigidBody3D27" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 46, 0.5, -4)
+
+[node name="RigidBody3D28" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 45, 0.5, -4)
+
+[node name="RigidBody3D29" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 44, 0.5, -4)
+
+[node name="RigidBody3D30" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0.5, -4)
+
+[node name="RigidBody3D31" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 42, 0.5, -4)
+
+[node name="RigidBody3D32" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 0.5, -4)
+
+[node name="RigidBody3D33" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0.5, -4)
+
+[node name="RigidBody3D34" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, 0.5, -3)
+
+[node name="RigidBody3D35" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47, 0.5, -2)
+
+[node name="RigidBody3D36" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 48, 0.5, -1)
+
+[node name="RigidBody3D37" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49, 0.5, 0)
+
+[node name="RigidBody3D38" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50, 0.5, 1)
+
+[node name="RigidBody3D26" parent="." instance=ExtResource("3_0rvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 43, 0.5, -1)
+
+[node name="RigidBody3D39" parent="." instance=ExtResource("2_moafn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 1, 3)
+
+[node name="RigidBody3D40" parent="." instance=ExtResource("2_moafn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 2, 3)
+
+[node name="RigidBody3D41" parent="." instance=ExtResource("2_moafn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 3, 3)
+
+[node name="RigidBody3D42" parent="." instance=ExtResource("2_moafn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 1, -3)
+
+[node name="RigidBody3D43" parent="." instance=ExtResource("2_moafn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 2, -3)
+
+[node name="RigidBody3D44" parent="." instance=ExtResource("2_moafn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 57, 3, -3)
+
+[node name="RigidBody3D47" parent="." instance=ExtResource("4_661o7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.8137, 1, -3)
+
+[node name="RigidBody3D48" parent="." instance=ExtResource("4_661o7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.8137, 1, 3)
+
+[node name="RigidBody3D49" parent="." instance=ExtResource("4_661o7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 70.9026, 1, 0)
+
+[node name="RigidBody3D50" parent="." instance=ExtResource("4_661o7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.7006, 1, -3)
+
+[node name="RigidBody3D51" parent="." instance=ExtResource("4_661o7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 74.7006, 1, 3)
+
+[node name="RigidBody3D54" parent="." instance=ExtResource("4_661o7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 81.8775, 1, 0)
+
+[node name="RigidBody3D55" parent="." instance=ExtResource("4_661o7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.9885, 1, -4)
+
+[node name="RigidBody3D56" parent="." instance=ExtResource("4_661o7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 84.9885, 1, 4)
+
+[node name="Area3D" parent="." instance=ExtResource("5_10sek")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 93.7195, 0, 0.016037)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_6ecno")

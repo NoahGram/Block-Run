@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://d36g340n7y6hn"]
+
+[ext_resource type="Script" path="res://Script/PlayerMovement.gd" id="1_wt58c"]
+[ext_resource type="PackedScene" uid="uid://boeu342wrj1vf" path="res://Scene/transitions.tscn" id="2_co7nu"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_trlqy"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_46kng"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_apmo7"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l5s60"]
+
+[node name="Player" type="CharacterBody3D" node_paths=PackedStringArray("transitioner")]
+collision_layer = 2
+script = ExtResource("1_wt58c")
+transitioner = NodePath("CanvasLayer/Transitioner")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_trlqy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+material_override = SubResource("StandardMaterial3D_46kng")
+mesh = SubResource("BoxMesh_apmo7")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_l5s60")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.867557, 0.497337, 0, -0.497337, 0.867557, 0, 1.792, 2.51215)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Transitioner" parent="CanvasLayer" instance=ExtResource("2_co7nu")]
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]

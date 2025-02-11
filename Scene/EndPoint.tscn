@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://liipnwj7ofj7"]
+
+[ext_resource type="Script" path="res://Script/EndPoint.gd" id="1_vu05d"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_by6me"]
+
+[node name="Area3D" type="Area3D"]
+collision_layer = 4
+collision_mask = 2
+script = ExtResource("1_vu05d")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0, 0)
+shape = SubResource("BoxShape3D_by6me")

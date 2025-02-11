@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddgb5hoj8f1tv"]
+
+[ext_resource type="Script" path="res://Script/TitleScreen.gd" id="1_xbkpl"]
+[ext_resource type="Texture2D" uid="uid://ct6aadetmm3oa" path="res://img/djalla.png" id="2_tixno"]
+[ext_resource type="Texture2D" uid="uid://cgdrbbhgrcrmt" path="res://img/Free-Nature-Backgrounds-Pixel-Art2.png" id="3_fpxqm"]
+[ext_resource type="Texture2D" uid="uid://c8vxwxhlq4kna" path="res://img/DALL·E 2025-02-01 01.43.21 - A pixel art icon for a game called 'Block Run'. The icon features a simple cube-shaped character with a bold, minimalistic design, jumping between flo.webp" id="4_bsnmd"]
+[ext_resource type="Texture2D" uid="uid://cotitraxomv7a" path="res://img/DALL·E 2025-02-01 01.45.30 - A pixel art wallpaper or title screen banner for a game called 'Block Run'. The scene showcases a blocky character mid-jump, navigating a series of fl.webp" id="5_cdp0a"]
+
+[node name="TitleScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xbkpl")
+
+[node name="Dall·e2025-02-0101_45_30-APixelArtWallpaperOrTitleScreenBannerForAGameCalled\'blockRun\'_TheSceneShowcasesABlockyCharacterMid-jump,NavigatingASeriesOfFl" type="Sprite2D" parent="."]
+position = Vector2(960, 537.5)
+scale = Vector2(1.07143, 1.05957)
+texture = ExtResource("5_cdp0a")
+
+[node name="Dall·e2025-02-0101_43_21-APixelArtIconForAGameCalled\'blockRun\'_TheIconFeaturesASimpleCube-shapedCharacterWithABold,MinimalisticDesign,JumpingBetweenFlo" type="Sprite2D" parent="."]
+position = Vector2(1006, -719)
+scale = Vector2(1.87598, 1.05469)
+texture = ExtResource("4_bsnmd")
+
+[node name="Free-nature-backgrounds-pixel-art2" type="Sprite2D" parent="."]
+position = Vector2(3165, -828)
+scale = Vector2(1.10944, 1.11333)
+texture = ExtResource("3_fpxqm")
+
+[node name="Djalla" type="Sprite2D" parent="."]
+position = Vector2(3134, 539)
+scale = Vector2(4.91667, 2.71086)
+texture = ExtResource("2_tixno")
+
+[node name="Start" type="Button" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1230.0
+offset_top = 864.0
+offset_right = 1447.0
+offset_bottom = 911.0
+disabled = true
+text = "Start"
+
+[node name="Level Selector" type="Button" parent="."]
+layout_mode = 0
+offset_left = 863.0
+offset_top = 814.0
+offset_right = 1080.0
+offset_bottom = 861.0
+text = "Level Selector"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 886.0
+offset_top = 896.0
+offset_right = 1049.0
+offset_bottom = 948.0
+text = "Exit To Desktop"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Level Selector" to="." method="_on_level_selector_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

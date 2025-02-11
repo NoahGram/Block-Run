@@ -1,0 +1,115 @@
+[gd_scene load_steps=4 format=3 uid="uid://dn7xdoevlnvl0"]
+
+[ext_resource type="Script" path="res://Script/level_selector.gd" id="1_e2vi5"]
+[ext_resource type="Texture2D" uid="uid://c8vxwxhlq4kna" path="res://img/DALL·E 2025-02-01 01.43.21 - A pixel art icon for a game called 'Block Run'. The icon features a simple cube-shaped character with a bold, minimalistic design, jumping between flo.webp" id="1_jg1cs"]
+[ext_resource type="Texture2D" uid="uid://di7l75axmc2ob" path="res://img/DALL·E 2025-02-03 16.31.46 - A pixel art background for a level selector screen in a game called 'Block Run'. The scene features a futuristic cityscape with floating platforms, ne.webp" id="3_6xv75"]
+
+[node name="level_selector" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_e2vi5")
+
+[node name="Dall·e2025-02-0316_31_46-APixelArtBackgroundForALevelSelectorScreenInAGameCalled\'blockRun\'_TheSceneFeaturesAFuturisticCityscapeWithFloatingPlatforms,Ne" type="Sprite2D" parent="."]
+position = Vector2(961, 541.5)
+scale = Vector2(1.07813, 1.06738)
+texture = ExtResource("3_6xv75")
+
+[node name="Dall·e2025-02-0101_43_21-APixelArtIconForAGameCalled\'blockRun\'_TheIconFeaturesASimpleCube-shapedCharacterWithABold,MinimalisticDesign,JumpingBetweenFlo" type="Sprite2D" parent="."]
+position = Vector2(3313, 532)
+scale = Vector2(1.87402, 1.05469)
+texture = ExtResource("1_jg1cs")
+
+[node name="level_1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 606.0
+offset_top = 708.0
+offset_right = 800.0
+offset_bottom = 756.0
+text = "Level 1"
+
+[node name="level_2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 708.0
+offset_right = 1060.0
+offset_bottom = 756.0
+text = "Level 2"
+
+[node name="level_3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1121.0
+offset_top = 708.0
+offset_right = 1315.0
+offset_bottom = 756.0
+text = "Level 3"
+
+[node name="level_4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 606.0
+offset_top = 782.0
+offset_right = 800.0
+offset_bottom = 830.0
+text = "Level 4"
+
+[node name="level_5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 782.0
+offset_right = 1060.0
+offset_bottom = 830.0
+text = "Level 5"
+
+[node name="level_6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1121.0
+offset_top = 782.0
+offset_right = 1315.0
+offset_bottom = 830.0
+text = "Level 6"
+
+[node name="level_7" type="Button" parent="."]
+layout_mode = 0
+offset_left = 606.0
+offset_top = 854.0
+offset_right = 800.0
+offset_bottom = 902.0
+text = "Level 7"
+
+[node name="level_8" type="Button" parent="."]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 854.0
+offset_right = 1060.0
+offset_bottom = 902.0
+text = "Level 8"
+
+[node name="level_9" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1121.0
+offset_top = 854.0
+offset_right = 1315.0
+offset_bottom = 902.0
+text = "Level 9"
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 959.0
+offset_right = 1060.0
+offset_bottom = 1007.0
+text = "Back to Menu"
+
+[connection signal="pressed" from="level_1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="level_2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="level_3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="level_4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="level_5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="level_6" to="." method="_on_level_6_pressed"]
+[connection signal="pressed" from="level_7" to="." method="_on_level_7_pressed"]
+[connection signal="pressed" from="level_8" to="." method="_on_level_8_pressed"]
+[connection signal="pressed" from="level_9" to="." method="_on_level_9_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

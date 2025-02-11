@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://ce2v312v4jhyj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_faybo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_majgg"]
+albedo_color = Color(0.392759, 0.617506, 0.339865, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_gord6"]
+material = SubResource("StandardMaterial3D_majgg")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lga4y"]
+
+[node name="RigidBody3D" type="RigidBody3D" groups=["terrain"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+shape = SubResource("BoxShape3D_faybo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+layers = 2
+mesh = SubResource("BoxMesh_gord6")
+skeleton = NodePath("../..")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+shape = SubResource("BoxShape3D_lga4y")
