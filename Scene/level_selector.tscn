@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dn7xdoevlnvl0"]
+[gd_scene load_steps=6 format=3 uid="uid://dn7xdoevlnvl0"]
 
-[ext_resource type="Script" path="res://Script/level_selector.gd" id="1_e2vi5"]
+[ext_resource type="Script" uid="uid://7s5iw41042md" path="res://Script/level_selector.gd" id="1_e2vi5"]
 [ext_resource type="Texture2D" uid="uid://c8vxwxhlq4kna" path="res://img/DALL·E 2025-02-01 01.43.21 - A pixel art icon for a game called 'Block Run'. The icon features a simple cube-shaped character with a bold, minimalistic design, jumping between flo.webp" id="1_jg1cs"]
 [ext_resource type="Texture2D" uid="uid://di7l75axmc2ob" path="res://img/DALL·E 2025-02-03 16.31.46 - A pixel art background for a level selector screen in a game called 'Block Run'. The scene features a futuristic cityscape with floating platforms, ne.webp" id="3_6xv75"]
+[ext_resource type="Texture2D" uid="uid://ct6aadetmm3oa" path="res://img/djalla.png" id="4_d3bvb"]
+[ext_resource type="Texture2D" uid="uid://cybfmbgtwkgrv" path="res://img/9t0lhgvm2ze21.jpg" id="4_l4c1g"]
 
 [node name="level_selector" type="Control"]
 layout_mode = 3
@@ -22,6 +24,17 @@ texture = ExtResource("3_6xv75")
 position = Vector2(3313, 532)
 scale = Vector2(1.87402, 1.05469)
 texture = ExtResource("1_jg1cs")
+
+[node name="9t0Lhgvm2Ze21" type="Sprite2D" parent="."]
+position = Vector2(987, 551)
+scale = Vector2(2.94477, 1.54062)
+texture = ExtResource("4_l4c1g")
+
+[node name="Djalla" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(997, 546)
+scale = Vector2(5.06061, 2.77723)
+texture = ExtResource("4_d3bvb")
 
 [node name="level_1" type="Button" parent="."]
 layout_mode = 0

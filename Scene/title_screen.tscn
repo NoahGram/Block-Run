@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ddgb5hoj8f1tv"]
 
-[ext_resource type="Script" path="res://Script/TitleScreen.gd" id="1_xbkpl"]
+[ext_resource type="Script" uid="uid://c4jn2ggc83chh" path="res://Script/TitleScreen.gd" id="1_xbkpl"]
 [ext_resource type="Texture2D" uid="uid://ct6aadetmm3oa" path="res://img/djalla.png" id="2_tixno"]
 [ext_resource type="Texture2D" uid="uid://cgdrbbhgrcrmt" path="res://img/Free-Nature-Backgrounds-Pixel-Art2.png" id="3_fpxqm"]
 [ext_resource type="Texture2D" uid="uid://c8vxwxhlq4kna" path="res://img/DALL·E 2025-02-01 01.43.21 - A pixel art icon for a game called 'Block Run'. The icon features a simple cube-shaped character with a bold, minimalistic design, jumping between flo.webp" id="4_bsnmd"]

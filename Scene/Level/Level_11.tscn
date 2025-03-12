@@ -1,7 +1,7 @@
 [gd_scene load_steps=13 format=3 uid="uid://j83fjd6vx80a"]
 
 [ext_resource type="PackedScene" uid="uid://d36g340n7y6hn" path="res://Scene/player.tscn" id="1_7hrum"]
-[ext_resource type="Script" path="res://Script/level_11.gd" id="1_o1lgf"]
+[ext_resource type="Script" uid="uid://ckgak5171l6n1" path="res://Script/level_11.gd" id="1_o1lgf"]
 [ext_resource type="Texture2D" uid="uid://ce4ixac1ws33o" path="res://Assets/Epic_GloriousPink_EquiRect.png" id="2_fbdwt"]
 [ext_resource type="PackedScene" uid="uid://cmwvckm6uty0a" path="res://Scene/Block/Massive_Block/massive_block_m.tscn" id="4_i2x8v"]
 [ext_resource type="PackedScene" uid="uid://cgtnyryp43c6i" path="res://Scene/Block/Massive_Block/massive_block_arm.tscn" id="5_cfr5s"]

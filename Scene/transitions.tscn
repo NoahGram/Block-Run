@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://boeu342wrj1vf"]
 
-[ext_resource type="Script" path="res://Script/Transitioner.gd" id="1_uxjq3"]
+[ext_resource type="Script" uid="uid://6ybiphqmqf8u" path="res://Script/Transitioner.gd" id="1_uxjq3"]
 
 [sub_resource type="Gradient" id="Gradient_h2hyg"]
 interpolation_mode = 1
@@ -97,9 +97,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1mkxw"]
 _data = {
-"RESET": SubResource("Animation_f7thr"),
-"fade_in": SubResource("Animation_ylv6w"),
-"fade_out": SubResource("Animation_e5tt8")
+&"RESET": SubResource("Animation_f7thr"),
+&"fade_in": SubResource("Animation_ylv6w"),
+&"fade_out": SubResource("Animation_e5tt8")
 }
 
 [node name="Transitioner" type="Control"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://d36g340n7y6hn"]
 
-[ext_resource type="Script" path="res://Script/PlayerMovement.gd" id="1_wt58c"]
+[ext_resource type="Script" uid="uid://bttlcio6oy0mv" path="res://Script/PlayerMovement.gd" id="1_wt58c"]
 [ext_resource type="PackedScene" uid="uid://boeu342wrj1vf" path="res://Scene/transitions.tscn" id="2_co7nu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_trlqy"]
